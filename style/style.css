@@ -13,12 +13,11 @@ body {
     align-self: center;
     justify-self: center;
     
-    
     background-color: rgb(166, 134, 255);
     align-items: center;
     margin: 0,auto;
     width: 100%;
-    
+    max-width: 100%;
 
     font-family: Arial, sans-serif;
 
@@ -26,14 +25,13 @@ body {
 }
 
 #logo_nordex {
-    padding: 5px;
-    flex: 1;
-    width: 80px;
-    height: auto;
+    
+    height: 100%; /* Faz o logo se ajustar à altura do header */
+    width: auto; /* Deixa a largura se ajustar automaticamente */
     margin-left: 10px;
     align-self: center;
     filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 1));
-
+    
 
 }
 
@@ -46,8 +44,9 @@ body {
 
 header {
     display: flex;
-
+    height: 50px; /* Usar height em vez de max-height para consistência */
     position: fixed;
+    z-index: 10;
     left: 0px;
     right: 0px;
     top: 0px;
@@ -60,12 +59,13 @@ header {
     color: white;
     padding: 10px;
     font-size: 20px;
+    
 
 
 }
 
 nav {
-
+    height: auto;
     color: white;
     flex: 4;
     display: flex;
@@ -167,14 +167,16 @@ main {
 
 aside {
     /*position 1*/
+    background-color: rgba(124, 77, 255, 0.534);
     padding: 20px;
     width: 20%;
     min-width: 200px;
     margin-left: 20px;
-    margin-right: 40px;
+    margin-right: 20px;
     color: white;
     font-size: 20px;
     padding: 10px;
+    border-radius: 20px;
     max-height: calc(100vh - 200px);
     /* Altura da tela - margem do topo - um respiro */
     overflow-y: auto;
@@ -201,24 +203,16 @@ aside {
 }
 #portfolioArticle {
     /*position 2*/
-    display: flex;
-    align-items: 0, auto;
-    margin: 0, auto;
+    display: grid;
     max-width: 1200px;
-    width: 100%;
-    flex: 2;
     padding: 30px;
     border-radius: 20px;
     background-color: rgba(124, 77, 255, 0.534);
     color: rgb(0, 0, 0);
     font-size: 20px;
     flex-direction: column;
-    /*max-height: calc(100vh - 100px);
+    overflow-y: auto;
     
-    overflow-y: auto;*/
-    
-    align-items: center;
-    justify-content: center;
 
 }
 
@@ -228,7 +222,7 @@ aside {
 #first_article,
 #second_article,
 #bottom_info {
-
+    text-align: center;
     border-radius: 20px;
 
 }
@@ -237,7 +231,7 @@ aside {
 #portfolioLink {
 
     text-decoration: underline;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -265,20 +259,28 @@ aside {
 }
 
 #gallery {
-    width: 100%;
+    width: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    
     border-radius: 20px;
+    justify-content: center;
 
 
 }
+
+/* Se a galeria tiver apenas uma imagem, faz ela ocupar todo o espaço */
+#gallery:has(li:only-child) {
+    grid-template-columns: 1fr;
+}
+
 .galleryImage {
-    width: 100%;
-    height: auto;
-    width: auto;
-    margin-left: 0;
-    margin-top: -20px;
+    
+    align-self: center;
+    justify-self: center;
+    
+    width: 100%; /* Faz a imagem ocupar 100% do contêiner */
+    margin-right: 0;
+    margin-top: 20px;
     border-radius: 30px;
 }
 
@@ -289,7 +291,7 @@ aside {
     margin-bottom: 50px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 40px;
-    width: 90%;
+    width: auto;
     justify-content: center;
     align-self: center;
     text-align: justify;
@@ -325,23 +327,41 @@ aside {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    background-color: blue;
+    background-color: rgb(100, 100, 255);
 
     margin-left: 20px;
     margin-right: 40px;
     color: white;
+    
     font-size: 20px;
-
-    max-height: calc(100vh - 200px);
-    /* Altura da tela - margem do topo - um respiro */
-    overflow-y: auto;
-    /* Adiciona barra de rolagem vertical se necessário */
+    height: 600px;
+    text-align: center;
 
 }
 
+h1{
+
+    color: white;
+}
+
 .img_article {
-    padding: 20px;
+    width: 300px;
+    height: auto;
+    
     align-self: center;
+    border-radius: 200px;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.226));
+    
+
+}
+
+#sobremimText{
+    margin: 20px;
+    padding: 20px;
+    color: white;
+    font-style: italic;
+    background-color: rgb(92, 92, 253);
+    border-radius: 20px;
 
 }
 
@@ -369,7 +389,7 @@ aside {
 
 footer {
     display: flex;
-    width: 100%;
+    width: 100vw;
     position: relative;
     left: 0px;
     right: 0px;

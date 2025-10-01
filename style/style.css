@@ -1,0 +1,160 @@
+body {
+    background-color: dimgrey;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+
+
+}
+
+#logo_nordex {
+    width: 80px;
+    height: auto;
+    margin-left: 10px;
+    align-self: center;
+    filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 1));
+
+
+}
+
+
+header {
+    display: flex;
+
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: auto;
+    margin: 0 auto;
+    flex-direction: row;
+    
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+nav {
+    
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+ul {
+    display: flex;
+    margin: 20px;
+    flex-direction: row;
+
+}
+
+li {
+    list-style: none;
+    margin: 0 15px;
+    
+    font-size: 18px;
+
+}
+
+main {
+    display: flex;
+    margin-top: 150px;
+    flex-direction: row;
+    width: auto;
+    justify-content: flex-end;
+    
+
+
+
+}
+
+aside
+{   /*position 1*/
+    padding: 20px;
+    background-color: rgb(255, 0, 0);
+    width: 20%;
+    min-width: 200px;
+    margin-left: 20px;
+    margin-right: 40px;
+    color: white;
+    font-size: 20px;
+
+    max-height: calc(100vh - 200px); /* Altura da tela - margem do topo - um respiro */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical se necessário */
+}
+#first_article
+{
+    /*position 2*/
+    width: 100%;
+    flex: 2;
+    padding: 20px;
+    background-color: rgb(255, 238, 0);
+    color: white;
+    font-size: 20px;
+    max-height: calc(100vh - 200px); /* Altura da tela - margem do topo - um respiro */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical se necessário */
+}
+
+#second_article{
+
+    /*position 3*/
+
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: blue;
+    
+    margin-left: 20px;
+    margin-right: 40px;
+    color: white;
+    font-size: 20px;
+
+    max-height: calc(100vh - 200px); /* Altura da tela - margem do topo - um respiro */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical se necessário */
+
+}
+
+.img_article{
+    padding: 20px;
+    align-self: center;
+    
+}
+
+
+#bottom_info {
+    
+    padding: 20px;
+    background-color: rgb(21, 255, 0);
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 40px;
+    color: white;
+    font-size: 25px;
+
+    /* max-height: calc(100vh - 200px); /* Altura da tela - margem do topo - um respiro */
+    /*overflow-y: auto; */ /* Adiciona barra de rolagem vertical se necessário */
+    
+    
+
+    
+
+
+}
+
+
+
+
+
+
+
+a {
+    text-decoration: none;
+    color: white;
+}

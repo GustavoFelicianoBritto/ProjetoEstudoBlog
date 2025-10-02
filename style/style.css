@@ -1,5 +1,8 @@
 body {
-    background-color: rgb(166, 134, 255);
+    background-color: #a686ffff;
+    background-image:url(../components/img/background.png);
+    background-size: 300px;
+    background-blend-mode:luminosity;
     align-items: center;
     margin: 0;
     width: 100%;
@@ -15,7 +18,7 @@ body {
     
     background-color: rgb(166, 134, 255);
     align-items: center;
-    margin: 0,auto;
+    margin: 0 auto;
     width: 100%;
     max-width: 100%;
 
@@ -190,7 +193,7 @@ aside {
     flex: 2;
     padding: 30px;
     border-radius: 20px;
-    background-color: rgba(124, 77, 255, 0.534);
+    background-color: rgb(124, 77, 255);
     color: rgb(0, 0, 0);
     font-size: 20px;
     /*max-height: calc(100vh - 100px);
